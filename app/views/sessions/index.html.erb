@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Twitter AppTwo</title>
+</head>
+
+
+<body>
+<h1>
+  Hello. Sign in here. Or not... you know... whatever. 
+</h1>
+
+<% if current_user %>
+    Signed in as <%= current_user.name %>
+      <%= link_to "Sign out", signout_path %>
+  <% else %>
+    <%= link_to "Sign in with Twitter", "auth/twitter" %>
+  <% end %>
+
+  THIS IS THE PAGE WE ARE KEEPING!!
+</body>
+</html>
